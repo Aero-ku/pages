@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+            font-size:12px;
+        }
+        .header{
+            height:35px;
+            width:100%;
+            background:#f5f5f5;
+        }
+        .nav-left li{
+            float:left;
+            height:35px;
+            height:35px;
+            line-height:35px;
+            text-align:center;
+            color:#555; 
+            cursor:pointer; 
+        }
+        .left1{
+            width:80px;
+            color:#555;
+        }
+        .left1:hover{
+            background:#fff;
+        }
+        .left1 span:last-child{
+            position:absolute;
+            display:inline-block;
+            padding:0;
+            margin-left:15px;
+            top:16px;
+            left:55px;
+            width:0px;
+            height:0px;
+            border-left:3px solid transparent;
+            border-right:3px solid transparent;
+            border-bottom:3px solid transparent;
+            border-top:3px solid #ccc;
+        }
+
+        .left2{
+            width:116px;
+            color:#f5f5f5;
+        }
+        .left2 a{
+            top:0;
+            /*display:inline-block;*/
+            margin-top:10px;
+            text-decoration:none;
+            color:#333;   
+        }
+        .left2 a:last-child{
+            position:absolute;
+            margin-top:7px;
+            margin-left:2px;
+            background:url(./img/tubiao.png) 0 0 no-repeat;
+            background-position:0px 4px;
+            background-size:17px;
+            width:19px;
+            height:18px;
+        }
+        .left2:hover{
+            background:#fff;
+        }
+        .left3{
+            width:70px;
+        }
+        .left3:hover{
+            background:#fff;
+        }
+        .left4{
+            width:90px;
+        }
+        .left4:hover{
+            background:#fff;
+        }
+        .nav-right{
+            margin-right:36px;
+        }
+        .nav-right li{
+            margin:0 3px;
+            padding:0 12px;
+            float:right;
+            line-height:35px;
+            color:#555;
+            height:35px;
+            text-align:center;
+            cursor:pointer;
+        }
+        .nav-right .nav-r7:hover,.nav-r6:hover,.nav-r5:hover,.nav-r4:hover,.nav-r3:hover,.nav-r2:hover,.nav-r1:hover{
+            background:#fff;
+        }
+        .decoration-box{
+            width:100%;
+            height:19px;
+        }
+        .top-wrapper{
+            /*display:inline-block;*/
+            height:88px;
+            width:1190px;
+            margin:0 auto;
+        }
+
+        .top{
+            background:#fff;
+            height:97px;
+            padding-top:24px;
+        }
+        .top #img-a{
+            position:absolute;
+            top:35px;
+            width:87px;
+        }
+        .top a img{
+            width:190px;
+            height:140px;
+            top:0;
+        }
+        .top .search-wrap{
+            height:87px;
+            width:630px;
+            margin:0 auto;
+        }
+        .search-wrap .searchTab{
+            margin-left:17px;
+            width:613px;
+            height:22px;
+        }
+        .searchTab ul li{
+            float:left;
+            margin-right:4px;
+            padding:0 3px;
+            cursor:pointer;
+            color:#f40;
+            width:36px;
+            height:22px;
+            text-align:center;
+            line-height:22px;
+        }
+        .searchTab ul li:first-child{
+            display:inline-block;
+            /*width:12px;*/
+            /*height:12px;*/
+            color:#fff;
+            background:#f40;
+        
+
+        }
+        .top .searchTab .selected{
+            border-top-left-radius:6px;
+            border-top-right-radius:6px;
+            font-size:700;
+            color:#fff;
+            background:#f40;
+            width:28px;
+            height:22px;
+        }
+        /*.top .searchZone{
+            height:62px;
+            width:630px;
+        }*/
+        .search-wrap .search-field{
+            position:relative;
+            width:630px;
+            height:40px;
+        }
+        .search-field div{
+            display:inline-block;
+        }
+        .search-field .search{
+            height:36px;
+            border:2px solid #ff5000;
+            border-top-left-radius:20px;
+            border-bottom-left-radius:20px;
+            margin-right:104px;
+            border-right:none;
+            overflow:hidden;
+            width:526px;
+        }
+        .search-field .search input{
+            height:36px;
+            width:468px;
+            text-indent:10px;
+            border:none;
+            font-size:16px;
+            outline:0;
+        }
+        .search-field .search-btn{
+          position:absolute;
+          top:0;
+          right:28px;
+          height:40px;
+          background:linear-gradient(to right,#ff9000 0%,#ff5000 100%);
+          cursor:pointer;
+          font-weight:700;
+          width:74px;
+          text-align:center;
+          border-top-right-radius:20px;
+          border-bottom-right-radius:20px;
+          color:#fff;
+          line-height:40px;
+          font-size:18px;
+        }
+        .search-hots{
+            height:18px;
+            line-height:18px;
+            overflow:hidden;
+            margin-bottom:5px;
+        }
+        .search-hots a{
+            /*float:left;*/
+            bottom:0px;
+            text-decoration:none;
+            color:#555;
+            margin-right:5px;
+        }
+        .search-hots a:last-child{
+            margin-left:24px;
+        }
+        .search-hots a:hover{
+            color:#f40;
+        }
+        .top .clearfix{
+            position:absolute;
+            top:75px;
+            right:160px;;
+            width:74px;
+            height:88px;
+            border:1px solid #eee;
+            text-align:center;
+            cursor:pointer;
+        }
+        .top .close{
+            position:absolute;
+            top:75px;
+            right:236px;
+            border:1px solid #eee;
+            width:12px;
+            height:12px;
+            line-height:12px;
+            font-size:14px;
+            padding-bottom:2px;
+            text-align:center;
+            color:#ccc;
+            cursor:pointer;
+
+        }
+        .top .clearfix span{
+            color:#f40;    
+        }
+        .top .clearfix .bg{
+            height:62px;
+            width:62px;
+            margin:0 auto;
+            background:url('./img/二维码.png') 0 0 no-repeat;
+            background-size:cover;
+        }
+        .top::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        .nav-title{
+            margin-top:33px;
+            height:30px;
+            line-height:30px;
+            background:linear-gradient(to right,#ff9000 0%, #ff5000 100%);
+        }
+        .nav-title h2{
+            display:inline-block;
+            background:#ff5000;
+            color:#fff;
+            float:left;
+            margin-left:45px;
+            width:190px;
+            text-align:center;
+            font-size:16px;
+            font-weight:700;
+        }
+        .nav-title ul li{
+            float:left;
+            margin:0 3px;
+        }
+        .nav-title ul li:first-child{
+            margin-left:16px;
+            
+        }
+        .nav-title ul li a{
+            text-decoration:none;
+            color:#fff;
+            font-weight:bold;
+            font-size:14px;
+            padding:0 5px;
+        }
+        .main{
+            width:100%;
+            background:#eee;
+            height:646px;
+            margin-left:px;
+        }
+        .content-l{
+            position:absolute;
+            background:#fff;
+            margin:0px;
+            padding:0px;
+            display:inline-block;
+            width:188px;
+            margin-top:-1px;
+            margin-left:45px;
+            border:1px solid #ff5000;
+        }
+        .content-l li{
+            height:32px;
+            margin-left:0.8px;
+            line-height:32px;
+            padding-left:25.5px;
+            padding-right:21.5px;
+            font-size:14px;
+            font-weight:400;
+            width:140px; 
+            color:#666;
+        }
+        .content-l li:last-child{
+            margin-bottom:11px;
+        }
+        .content-l li:hover{
+            background:#ffe4dd;
+        }
+        .content-l li a{
+            text-decoration:none;
+            margin-right:6px;
+            color:#666;
+        }
+        .content-l li a:hover{
+            color:#f40;
+            text-decoration:underline;
+        }
+        .content-m{
+            position:relative;
+            display:inline-block;
+            top:8px;
+            left:245px;
+            width:521px;
+            height:513px;
+            /*border:1px solid blue;*/
+            margin:0px;
+            padding:0px;
+        }
+        .content-m .img1{
+            position:absolute;
+            left:0px;
+            top:0px;
+            height:280px;
+            width:520px;
+            background:url('./img/lunbo.jpg');
+        }
+        .content-m .inner{
+            position:absolute;
+            width:520px;
+            left:0px;
+            top:283px;
+            height:22px;
+            background:url('./img/tianmao.png')0 0 no-repeat;
+            background-size:contain;
+            cursor:pointer;
+            /*text-align:center;*/
+        }
+        .content-m .inner span{
+            margin-left:136px;
+            height:22px;
+            line-height:22px;
+            color:#666;
+        }
+        .content-m .linear{
+            position:absolute;
+            top:305px;
+            left:0px;
+            height:3px;
+            width:519px;
+            background:#ff1648;
+        }
+        .content-m .selected{
+            position:absolute;
+            top:305px;
+            left:0px;
+            width:87px;
+            height:3px;
+            background:#000;
+            z-index:1;
+        }
+        .content-m .img2{
+            position:absolute;
+            top:308px;
+            left:0px;
+            height:200px;
+            width:522px;
+            /*border:1px solid #ccc;*/
+        }
+        .content-m .img2 li{
+            float:left;
+            width:129px;
+            height:68px;
+            text-align:center;
+            background:#fff;
+            /*border:1px solid #ccc;*/
+            margin-right:1px;
+            margin-bottom:1px;
+        }
+        .content-m .img2 li a{
+            display:inline-block;
+            height:42px;
+            width:84px;
+            /*border:1px solid black;*/
+            margin-top:13px;
+        }
+        .content-m .img2 li:nth-of-type(1) a{
+            background:url('./img/adidas.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(2) a{
+            background:url('./img/nb.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(3) a{
+            background:url('./img/nike.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(4) a{
+            background:url('./img/reebok.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(5) a{
+            background:url('./img/jack.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(6) a{
+            background:url('./img/playboy.png') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(7) a{
+            background:url('./img/asus.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(8) a{
+            background:url('./img/hp.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(9) a{
+            background:url('./img/hkc.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(10) a{
+            background:url('./img/vivio.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(11) a{
+            background:url('./img/jvr.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m .img2 li:nth-of-type(12) a{
+            background:url('./img/microsoft.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-m2{
+            position:relative;
+            display:inline-block;
+            top:8px;
+            left:250px;
+            width:160px;
+            height:513px;
+            /*border:1px solid blue;*/
+            margin:0px;
+            padding:0px;
+        }
+        .content-m2 .img1{
+            position:absolute;
+            left:0px;
+            top:0px;
+            width:100%;
+            height:280px;
+            background:url('./img/beautiful.webp') 0 0 no-repeat;
+        }
+        .content-m2 span{
+            position:absolute;
+            color:#a1a1a1;
+            font-size:12px;
+            font-weight:400;
+            top:285px;
+        }
+        .content-m2 .img2{
+            position:absolute;
+            top:304px;
+            height:209.5px;
+            width:100%;
+            background:url('./img/keyboard.jpg') 0 0 no-repeat;
+            background-size:contain;
+            background:#fff;
+        }
+        .content-m2 .img2 div{
+            position:absolute;
+            top:0px;
+            height:202px;
+            width:100%;
+            background:url('./img/keyboard.jpg') 0 0 no-repeat;
+            background-size:contain;
+        }
+        .content-r{
+            position:relative;
+            top:-508px;
+            left:945px;
+            /*height:145px;*/
+            width:290px;
+            /*border:1px solid black;*/
+        }
+        .content-r .imgBg{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:145px;
+            background:url('./img/memberbg.png') 0 0 no-repeat;
+            background-size:cover;
+            /*text-align:center;*/
+        }
+        .content-r .imgBg .photo{
+            width:74px;
+            height:56px;
+            margin:10px auto;
+            text-align:center;
+        }
+        .content-r .imgBg .photo a{
+            display:inline-block;
+            height:50px;
+            width:50px;
+            background:url('./img/member.jpg') 0 0 no-repeat;
+            background-size:contain;
+            border-radius:50%;
+            cursor:pointer;
+        }
+        .content-r .imgBg .member-related{
+            height:18px;
+            margin-top:14px;
+        }
+        .content-r .imgBg .member-related a{
+            margin-left:20px;
+            display:inline-block;
+            text-decoration:none;
+            color:#ff5000;
+            padding-left:20px;
+            padding-right:12px;
+            background:#ffe4db;
+            border-radius:9px;
+            height:18px;
+            line-height:20px;
+        }
+        .content-r .imgBg .member-related a:first-child{
+            margin-left:38px;
+        }
+        .content-r .imgBg .member-related a:last-child{
+            margin-left:6px;
+        }
+        .content-r .imgBg .member-related a:first-child span{
+            position:absolute;
+            display:inline-block;
+            height:18px;
+            left:39px;
+            width:18px;
+            background:url('./img/logo.png') 0px -584px no-repeat;
+            background-size:25px 610px;
+        }
+        .content-r .imgBg .member-related a:last-child span{
+            position:absolute;
+            display:inline-block;
+            height:18px;
+            left:151px;
+            width:20px;
+            background:url('./img/logo.png') 0px -538px no-repeat;
+            background-size:25px 610px;        
+        }
+        .content-r .imgBg .member-colomn{
+            width:275px;
+            margin:0 auto;
+        }
+        .content-r .imgBg .member-colomn a{
+            text-align:center;
+            display:inline-block;
+            float:left;
+            width:67px;
+            height:36px;
+            text-decoration:none;
+            color:#3c3c3c;
+        }
+        .content-r .imgBg .member-colomn a strong{
+            color:#ff5000;
+            font-size:14px;
+        }
+        .content-r .inner{
+            position:absolute;
+            top:145px;
+            width:100%;
+            height:24px;
+            background:#ffe4dd;
+            text-align:center;
+            line-height:24px;
+            color:#f40;
+            cursor:pointer;
+        }
+        #direct{
+            position:absolute;
+            width:0px;
+            height:0px;
+            border-top:5px solid transparent;
+            border-left:5px solid #f40;
+            border-bottom:5px solid transparent;
+            border-right:5px solid transparent;
+            top:7px;
+            left:240px;
+        }
+        .content-r .notice{
+            padding-top:10px;
+            position:absolute;
+            width:100%;
+            height:99.5px;
+            background:#fff;
+            top:169px;
+            left:0px;
+        }
+        .content-r .notice .notice-hd{
+            margin-top:4px;
+            position:relative;
+            height:24px;
+            width:100%;
+        }
+        .content-r .notice .notice-hd li{
+            float:left;
+            width:36px;
+            text-align:center;
+            margin: 0  11px;
+            
+        }
+        .content-r .notice .notice-hd li a{
+            color:#3c3c3c;
+            text-decoration:none;
+        }
+        .content-r .notice .notice-hd li a:hover{
+            color:#000;
+            font-weight:700px;
+            text-decoration:undeline;
+        }
+        .content-r .notice .notice-first{/*为什么ul只能设置padding，而设置不了margin*/
+            padding:14px;
+            margin-top:30px;
+            padding-left:12px;
+            margin:0 auto;
+        }
+        .content-r .notice .notice-first li{
+            height:25px;
+            line-height:25px;
+        }
+        .content-r .notice .notice-first li a{
+            text-decoration:none;
+            color:#333;  
+        }
+        .content-r .notice .notice-first li .hover{
+            color:#f40;
+        }
+        .content-r .canve{
+            position:absolute;
+            width:100%;
+            top:280px;
+        }
+        .content-r .canve li{
+            float:left;
+            width:71px;
+            height:77px;
+            margin-right:1px;
+            margin-bottom:1px;
+            background:#fff;
+            text-align:center;
+        }
+        .content-r .canve .item2,.content-r .canve .item3,.content-r .canve .item4{
+            width:72px;
+        }
+        .content-r .canve .item4{
+            margin-right:0;
+        }
+        .content-r .canve .item6,.content-r .canve .item7,.content-r .canve .item8{
+            width:72px;
+        }
+        .content-r .canve .item8{
+            margin-right:0;
+        }
+        .content-r .canve .item10,.content-r .canve .item11,.content-r .canve .item12{
+            width:72px;
+        }
+        .content-r .canve .item12{
+            margin-right:0;
+        }
+        .content-r .canve li a{
+            text-decoration:none;
+            color:#333;
+        }
+        .content-r .canve li a span{
+            display:inline-block;
+            height:24px;
+            width:24px;
+            margin:15px 0 6px;
+            background:url('./img/logo.png') 0 0 no-repeat;
+            background-size:25px 610px;
+        }
+        .content-r .canve .item2 a span{
+            width:25px;
+            background-position: 0 -89px;
+        }
+        .content-r .canve .item3 a span{
+            width:25px;
+            background-position: 0 -46px;
+        }
+        .content-r .canve .item4 a span{
+            width:25px;
+            background-position: 0 -135px;
+        }
+        .content-r .canve .item5 a span{
+            height:25px;
+            background-position: 0 -178px;
+        }
+        .content-r .canve .item6 a span{
+            height:25px;
+            background-position: 0 -226px;
+        }
+        .content-r .canve .item7 a span{
+            height:25px;
+            background-position: 0 -268px;
+        }
+        .content-r .canve .item8 a span{
+            width:25px;
+            background-position: 0 -315px;
+        }
+        .content-r .canve .item9 a span{
+            height:25px;
+            width:25px;
+            background-position: 0 -360px;
+        }
+        .content-r .canve .item10 a span{
+            height:25px;
+            background-position: 0 -405px;
+        }
+        .content-r .canve .item11 a span{
+            height:25px;
+            background-position: 0 -450px;
+        }
+        .content-r .canve .item12 a span{
+            height:25px;
+            background-position: 0 -495px;
+        }
+        .headline{
+            position:relative;
+            width:890px;
+            height:103px;
+            top:15px;
+            left:45px;
+            background:#fff;
+            margin-bottom:20px;
+        }
+        .headline .headline-bg{/*此处存在margin塌陷问题,四种方法解决：1、float：left/right 2、position：absolute; 3、overflow:hidden; 4、display:inline-block*/
+            background:url('./img/headline.png') 0 0 no-repeat;
+            background-position-y: 18px;
+            background-size:contain;
+            width:156px;
+            height:73px;
+            background-position: 0 0;
+            margin-top:23px;
+            left:22px;
+            position:absolute;/*解决margin塌陷方法*/
+        }
+        .headline .headline-bg span{
+            display:inline-block;
+            margin-top:37px;
+            color:#666;
+            font-size:14px;
+        }
+        .headline .img1{
+            position:absolute;
+            top:14px;
+            left:230px;
+            width:130px;
+            height:73px;
+            background:url('./img/headline-img1.webp') 0 0 no-repeat;
+            cursor:pointer;
+        }
+        .headline h4{
+            display:inline-block;
+            margin-left:380px;
+            margin-top:20px;
+            font-size:16px;
+            cursor:pointer;
+            color:#333;
+            font-weight:500;
+        }
+        .headline h4:hover{
+            color:#f40;
+        }
+        .headline h4 .more{
+            position:absolute;
+            right:10px;
+            color:#555;
+            font-weight:350;
+            cursor:pointer;
+        }
+        .headline .detail{
+            position:absolute;
+            width:450px;
+            right:60px;
+            top:42px;
+            color:#555;
+            cursor:pointer;
+        }
+        .main .apps{
+            position:absolute;
+            right:10px;
+            width:290px;
+            height:110px;
+            top:730px;
+            right:28px;
+            background:#fff;
+        }
+        .main .apps h3{
+            position:relative;
+            text-align:left;
+            height:30px;
+            line-height:30px;
+            padding-left:14px;
+        }
+        .main .apps h3 a{
+            position:absolute;
+            right:6px;
+            text-decoration:none;
+            color:#555;
+            height:30px;
+            line-height:30px;
+            font-weight:normal;
+        }
+        .main .apps ul{
+            padding-left:23px;
+            position:relative;
+            width:267px;
+            height:75px;
+        }
+        .main .apps ul li{
+            float:left;
+            height:32px;
+            width:32px;
+            margin-right:21px;
+            margin-bottom:8px;
+            background:url('./img/tb.webp');
+            background-size:contain;
+            cursor:pointer;
+        }
+        .main .apps ul li:nth-of-type(2){
+            background:url('./img/tm.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(3){
+            background:url('./img/ju.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(4){
+            background:url('./img/zhi.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(5){
+            background:url('./img/wang.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(6){
+            background:url('./img/xia.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(7){
+            background:url('./img/pig.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(8){
+            background:url('./img/ding.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(9){
+            background:url('./img/youku.webp');
+            background-size:contain;
+        }
+        .main .apps ul li:nth-of-type(10){
+            background:url('./img/tudou.webp');
+            background-size:contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul class="nav-left">
+            <li class="left1"><span>中国大陆</span><span></span></li>
+            <li class="left2"><a href="">Aero、酷</a><a href=""></a></li>
+            <li class="left3"><span>消息</span></li>
+            <li class="left4"><span>手机逛淘宝</span></li>
+        </ul>
+        <ul class="nav-right">
+            <li class="nav-r1"><span>网站导航</span></li>
+            <li class="nav-r2"><span>联系客服</span></li>
+            <li class="nav-r3"><span>卖家中心</span></li>
+            <li class="nav-r4"><span>商品分类</span></li>
+            <li class="nav-r5"><span>收藏夹</span></li>
+            <li class="nav-r6"><span>购物车</span></li>
+            <li class="nav-r7"><span>我的淘宝</span></li>
+        </ul>
+    </div>
+    <div class="decoration-box"></div>
+    <div class="top-wrapper">
+        <div class="top">
+            <a id="img-a"href="">
+                <img src="https://img.alicdn.com/tfs/TB1mGl9sH9YBuNjy0FgXXcxcXXa-190-140.gif" alt="">
+            </a>
+            <div class="search-wrap">
+                <div class="searchTab">
+                    <ul>
+                        <li class="selected">淘宝</li>
+                        <li>天猫</li>
+                        <li>店铺</li>
+                    </ul>
+                </div>
+                <div class="search-field">
+                    <div class="search"><input type="text"></div>
+                    <div class="search-btn">搜索</div>
+                </div>
+                <div class="search-hots">
+                    <a href="">新款连衣裙</a>
+                    <a href="">四件套</a>
+                    <a href="">潮流T恤</a>
+                    <a href="">时尚女鞋</a>
+                    <a href="">短裤</a>
+                    <a href="">半身裙</a>
+                    <a href="">男士外套</a>
+                    <a href="">墙纸</a>
+                    <a href="">行车记录仪</a>
+                    <a href="">新款男鞋</a>
+                    <a href="">耳机</a>
+                    <a href="">更多></a>
+                </div>
+            </div>
+            <div class="close">x</div>
+            <div class="clearfix">
+                <span>手机淘宝</span>
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-title">
+        <h2>主题市场</h2>
+        <ul class="nav-l">
+            <li><a href="">天猫</a></li>
+            <li><a href="">聚划算</a></li>
+            <li><a href="">天猫超市</a></li>
+            <li><a href="">|</a></li>
+        </ul>
+        <ul class="nav-m">
+            <li><a href="">淘抢购</a></li>
+            <li><a href="">电器城</a></li>
+            <li><a href="">司法拍卖</a></li>
+            <li><a href="">中国质造</a></li>
+            <li><a href="">兴农扶贫</a></li>
+            <li><a href="">|</a></li>
+        </ul>
+        <ul class="nav-r">
+            <li><a href="">飞猪旅行</a></li>
+            <li><a href="">智能生活</a></li>
+            <li><a href="">苏宁易购</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="content-l">
+            <li>
+                <a href="">女装</a>/
+                <a href="">男装</a>/
+                <a href="">内衣</a>/
+            </li>
+            <li>
+                <a href="">鞋靴</a>/
+                <a href="">箱包</a>/
+                <a href="">配件</a>/
+            </li>
+            <li>
+                <a href="">童装玩具</a>/
+                <a href="">孕产</a>/
+                <a href="">用品</a>
+            </li>
+            <li>
+                <a href="">家电</a>/
+                <a href="">数码</a>/
+                <a href="">手机</a>
+            </li>
+            <li>
+                <a href="">美妆</a>/
+                <a href="">洗护</a>/
+                <a href="">保健品</a>
+            </li>
+            <li>
+                <a href="">珠宝</a>/
+                <a href="">眼镜</a>/
+                <a href="">手表</a>
+            </li>
+            <li>
+                <a href="">运动</a>/
+                <a href="">户外</a>/
+                <a href="">乐器</a>
+            </li>
+            <li>
+                <a href="">游戏</a>/
+                <a href="">动漫</a>/
+                <a href="">影视</a>
+            </li>
+            <li>
+                <a href="">美食</a>/
+                <a href="">生鲜</a>/
+                <a href="">零食</a>
+            </li>
+            <li>
+                <a href="">鲜花</a>/
+                <a href="">宠物</a>/
+                <a href="">农资</a>
+            </li>
+            <li>
+                <a href="">房产</a>/
+                <a href="">装修</a>/
+                <a href="">建材</a>
+            </li>
+            <li>
+                <a href="">家具</a>/
+                <a href="">家饰</a>/
+                <a href="">家纺</a>
+            </li>
+            <li>
+                <a href="">汽车</a>/
+                <a href="">二手车</a>/
+                <a href="">用品</a>
+            </li>
+            <li>
+                <a href="">办公</a>/
+                <a href="">DIY</a>/
+                <a href="">五金电子</a>
+            </li>
+            <li>
+                <a href="">百货</a>/
+                <a href="">餐厨</a>/
+                <a href="">家庭保健</a>
+            </li>
+                <li>
+                <a href="">学习</a>/
+                <a href="">卡券</a>/
+                <a href="">本地服务</a>
+            </li>
+        </ul>
+        <div class="content-m">
+            <div class="img1"></div>
+            <div class="inner"><span>理想生活上天猫</span><span></span><span>1/6</span></div>
+            <div class="linear"></div>
+            <div class="selected"></div>
+            <ul class="img2">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+        <div class="content-m2">
+            <div class="img1"></div>
+            <span>今日热卖</span>
+            <div class="img2"><div></div></div>
+        </div>
+        <div class="content-r">
+            <div class="imgBg">
+                <div class="photo">
+                    <a href=""></a>
+                    <p>Hi!,Aero、酷</p>
+                 </div>
+                 <p class="member-related"><a href=""><span></span>领淘金币抵钱</a><a href=""><span></span>会员俱乐部</a></p>
+                 <div class="member-colomn">
+                     <a href=""><strong>3</strong><br>待收货</a>
+                     <a href=""><strong>6</strong><br>待发货</a>
+                     <a href=""><strong>3</strong><br>待付款</a>
+                     <a href=""><strong>7</strong><br>待评价</a>
+                 </div>
+            </div>
+            <div class="inner">网上有害信息举报专区<div id="direct"></div></div>
+            <div class="notice">
+                <ul class="notice-hd">
+                    <li><a href="">公告</a></li>
+                    <li><a href="">规则</a></li>
+                    <li><a href="">论坛</a></li>
+                    <li><a href="">安全</a></li>
+                    <li><a href="">公益</a></li>
+                </ul>
+                <ul class="notice-first">
+                    <li><a href="" class="hover">优酷拿下2018年世界杯直播权 进军体育内容市场</a></li>
+                    <li><a href="">新零售掀京城消费风潮</a>  <a href="">村淘兴农扶贫湖北扎根</a></li>
+                </ul>
+            </div>
+            <ul class="canve">
+                <li class="item1"> 
+                    <a href="">
+                        <span></span> 
+                        <p>充话费</p>
+                    </a>
+                </li>
+                <li class="item2">
+                    <a href="">
+                        <span></span> 
+                        <p>旅行</p>
+                    </a>
+                </li>
+                <li class="item3">
+                    <a href="">
+                        <span></span> 
+                        <p>车险</p>
+                    </a>
+                </li>
+                <li class="item4">
+                    <a href="">
+                        <span></span> 
+                        <p>游戏</p>
+                    </a>
+                </li>
+                <li class="item5">
+                    <a href="">
+                        <span></span> 
+                        <p>彩票</p>
+                    </a>
+                </li>
+                <li class="item6">
+                    <a href="">
+                        <span></span> 
+                        <p>电影</p>
+                    </a>
+                </li>
+                <li class="item7">
+                    <a href="">
+                        <span></span> 
+                        <p>酒店</p>
+                    </a>
+                </li>
+                <li class="item8">
+                    <a href="">
+                        <span></span> 
+                        <p>理财</p>
+                    </a>
+                </li>
+                <li class="item9">
+                    <a href="">
+                        <span></span> 
+                        <p>找服务</p>
+                    </a>
+                </li>
+                <li class="item10">
+                    <a href="">
+                        <span></span> 
+                        <p>演出</p>
+                    </a>
+                </li>
+                <li class="item11">
+                    <a href="">
+                        <span></span> 
+                        <p>水电煤</p>
+                    </a>
+                </li>
+                <li class="item12">
+                    <a href="">
+                        <span></span> 
+                        <p>火车票</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="headline">
+            <div class="headline-bg"><span>让你的生活更有趣</span></div>
+            <div class="img1"></div>
+            <h4>福利：最高8000减1200数码家电神券到<span class="more">更多></span></h4>
+            <p class="detail">购物锦囊中有哪些确定一定以及肯定需要关(duo)注(shou)的妙计？重要的事情先说一遍：跨店满减上线啦，数码3C购物券与家电购物券同期上线，最高8000减1200神券来袭！还可叠加购物津贴有没有？！</p>
+        </div>
+        <div class="apps">
+            <h3>阿里APP <a href="">更多></a></h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
